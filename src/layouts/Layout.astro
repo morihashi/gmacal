@@ -4,8 +4,12 @@ export interface Props {
 	description?: string;
 }
 
-const { title, description = "GMA CAL Inc. - モバイルウォレットマーケティングソリューション" } = Astro.props;
+const { title, description = "GMACAL Inc. - モバイルウォレットマーケティングソリューション" } = Astro.props;
 ---
+
+<style>
+	@import "/src/styles/global.css";
+</style>
 
 <!doctype html>
 <html lang="ja">
@@ -25,8 +29,6 @@ const { title, description = "GMA CAL Inc. - モバイルウォレットマー�
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="GMA CAL Inc." />
 		
-		<!-- Tailwind CSS -->
-		<link rel="stylesheet" href="/src/styles/global.css" />
 	</head>
 	<body class="bg-gray-50 text-gray-900 font-sans">
 		<!-- Skip Link for Accessibility -->
