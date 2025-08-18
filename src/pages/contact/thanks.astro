@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="お問い合わせありがとうございます - gmacal Inc."
+  description="お問い合わせいただきありがとうございます。担当者より2営業日以内にご連絡いたします。"
+>
+  <!-- Thank You Section -->
+  <section class="py-16 sm:py-20 bg-gradient-to-br from-green-50 to-blue-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Success Icon -->
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+        お問い合わせありがとうございます
+      </h1>
+      
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+        お問い合わせいただいた内容を確認いたしました。<br>
+        担当者より<strong class="text-blue-600">2営業日以内</strong>にご連絡いたします。
+      </p>
+
+      <div class="bg-white rounded-lg shadow-sm p-6 mb-8 text-left max-w-2xl mx-auto">
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">今後の流れ</h2>
+        <ol class="space-y-3 text-gray-600">
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5">1</span>
+            お問い合わせ内容の確認・検討
+          </li>
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5">2</span>
+            担当者よりメールまたはお電話にてご連絡
+          </li>
+          <li class="flex items-start">
+            <span class="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold mr-3 mt-0.5">3</span>
+            詳細なご相談・お打ち合わせの調整
+          </li>
+        </ol>
+      </div>
+
+      <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+        <a 
+          href="/" 
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+        >
+          ホームに戻る
+        </a>
+        <a 
+          href="/services/" 
+          class="inline-block bg-white hover:bg-gray-50 text-blue-600 font-semibold px-8 py-3 rounded-lg border border-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+        >
+          サービス一覧を見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Information Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <div class="flex items-start">
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="ml-4">
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">お急ぎの場合</h3>
+            <p class="text-blue-800 text-sm leading-relaxed">
+              緊急のお問い合わせやお急ぎの場合は、直接メール（
+              <a href="mailto:contact@gmacal.co.jp" class="underline hover:no-underline">contact@gmacal.co.jp</a>
+              ）にてご連絡ください。件名に「【緊急】」を付けていただけますと、優先的に対応いたします。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

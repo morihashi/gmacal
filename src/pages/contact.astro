@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="お問い合わせ - gmacal Inc."
+  description="gmacalへのお問い合わせはこちらから。モバイルウォレットソリューションに関するご質問やご相談をお待ちしております。"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          お問い合わせ
+        </h1>
+        <p class="text-xl sm:text-2xl text-blue-100 max-w-3xl mx-auto">
+          モバイルウォレットソリューションについてのご質問やご相談は、お気軽にお問い合わせください
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <div class="mb-8 text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">お問い合わせフォーム</h2>
+          <p class="text-gray-600">
+            下記フォームにご記入いただき、送信してください。担当者よりご連絡いたします。
+          </p>
+        </div>
+
+        <form 
+          name="contact" 
+          method="POST" 
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          class="space-y-6"
+          action="/contact/thanks/"
+        >
+          <!-- Hidden fields for Netlify -->
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="sr-only">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <!-- Company Name -->
+          <div>
+            <label for="company" class="block text-sm font-semibold text-gray-900 mb-2">
+              会社名・組織名 <span class="text-red-500">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="company" 
+              name="company" 
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+              placeholder="株式会社◯◯"
+            />
+          </div>
+
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">
+              お名前 <span class="text-red-500">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+              placeholder="山田 太郎"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
+              メールアドレス <span class="text-red-500">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+              placeholder="example@company.com"
+            />
+          </div>
+
+
+          <!-- Subject -->
+          <div>
+            <label for="subject" class="block text-sm font-semibold text-gray-900 mb-2">
+              件名 <span class="text-red-500">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors"
+              placeholder="お問い合わせの件名をご記入ください"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">
+              お問い合わせ内容 <span class="text-red-500">*</span>
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required
+              rows="6"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors resize-vertical"
+              placeholder="具体的なお問い合わせ内容をご記入ください"
+            ></textarea>
+          </div>
+
+          <!-- Privacy Agreement -->
+          <div class="flex items-start">
+            <input 
+              type="checkbox" 
+              id="privacy" 
+              name="privacy" 
+              required
+              class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-600 border-gray-300 rounded"
+            />
+            <label for="privacy" class="ml-3 text-sm text-gray-700">
+              <a href="/privacy/" class="text-blue-600 hover:text-blue-800 underline" target="_blank">
+                プライバシーポリシー
+              </a>
+              に同意します <span class="text-red-500">*</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center pt-6">
+            <button 
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            >
+              送信する
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>
